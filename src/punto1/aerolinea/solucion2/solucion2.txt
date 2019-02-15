@@ -1,0 +1,11 @@
+
+
+Otra forma de solucionarlo seria que el metodo filtrar vuelos en Aerolinea
+    construya un sentencia SQL a traves de un QueryBuilder y donde cada filtro
+    devuelve el SQL al que mapearia dentro del WHERE de la sentencia.
+
+Esta solucion 2 seria mas performante que 1 ya que
+    la forma en la que se iteran y filtran los resultados en una BDD es mas performante
+    en procesamiento y memoria que obtener los vuelos de cada objeto aerolinea,
+    levantando todas las aerolineas y los objetos de vuelos a memoria
+    y pasar cada objeto vuelo por todos los filtros (tambien levantados en memoria).
